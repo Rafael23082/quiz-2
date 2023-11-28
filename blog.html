@@ -18,12 +18,27 @@
     Key takeaways
     Have a clear purpose for your blog. Arika successfully showcases her photography portfolio and establishes her expertise of the Zion area. This clear purpose helps her to focus her content and to attract the right audience.
     Be an expert in your field. Arika is an expert in canyoneering and hiking, and her knowledge comes through in her blog posts. She provides detailed guidance on these activities, which is invaluable to her audience.</div>
-
 <script>
-        $(window).resize(function() {
-        var width = $(window).width();
-        if (width < 1200){
-            alert('Your screen is too small');
-        }
-        });
+$(document).ready(function() {
+    function handleResize() {
+    var Screenwidth = $(window).width();
+    if (Screenwidth < 600){
+        alert ("Screen size is not recommended to read the blog as it may hurt your eyes");
+    }
+    if (Screenwidth < 600) {
+        $(".box").css("padding", "20px");
+        $(".box2").css("padding", "20px");
+        $(".box2").css("margin-top", "20px");
+    } else {
+        $(".box").css("padding", "40px");
+        $(".box2").css("padding", "40px");
+        $(".box2").css("margin-top", "20px");
+    }
+    }
+    handleResize();
+    $(window).resize(function() {
+    handleResize();
+    });
+});
+  </script>
 </script>
